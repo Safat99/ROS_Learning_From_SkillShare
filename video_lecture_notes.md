@@ -1,29 +1,38 @@
-Following SkillShare ROS course 90 vdos 
-Introduction >>> 
+# Following SkillShare ROS2 course of total 90 videos 
+
+### Introduction 
 	ROS is something between middleware and a framework but especially for robot applications
-Goals>> can be used on any robots
-	>> you don’t need to reinvent the wheel
-Advantage>> code separation
-	>> plug and play libraries >> navigation >> libraries
-	>> we can use both languages on the same project
-Installation >>
-Documentation ( vdo 4-8)
-Demo node >> vdo 9 ( ros node talker receiver) 
-=================================================================
+### Goals
+	> can be used on any robots
+	> you don’t need to reinvent the wheel
+### Advantage 
+	* code separation
+	* plug and play libraries >> navigation 
+	* libraries >> we can use both languages on the same project
+
+Installation
+	Documentation ( vdo 4-8)
+	Demo node >> vdo 9 ( ros node talker receiver) 
+
 ```source /opt/ros/foxy/setup.bash```
-—----------------------------------------------------------------------------------------------------------
-VDO 10 >>>
-```ros2 run demo_nodes_cpp talker```
-```ros2 run demo_nodes_cpp listener```
-—----------------------------------------------------------------------------------------------------- 
-Learning >> LTS >> long term support, terminator for multi terminal
-	>> vdo 11 >> to setup new node .., create package , rewrite the node inside the package, save compile run >>>
-Vdo 12 >>> colcon build, colcon-extension package install >>
-Colcon >>>> to create my own ros2 program we need a build tool specialized for ros2 which is named colcon..
+
+
+### VDO 10 >>>
+	ros2 run demo_nodes_cpp talker
+	ros2 run demo_nodes_cpp listener
+Learning 
+	>> LTS >> long term support, terminator for multi terminal
+
+### VDO 11 >> 
+	to setup new node .., create package , rewrite the node inside the package, save compile run >>>
+
+## VDO 12 >>> 
+	colcon build, colcon-extension package install 
+	colcon to create my own ros2 program we need a build tool specialized for ros2 which is named colcon..
 ```sudo apt install python3-colcon-common-extensions```
 We also need to enable also autocompletion features of colcon which has to run everytime
-```cd usr/share/colcon_argcomplete/hook/
- ```source colcon-argcomplete.bash```
+```cd usr/share/colcon_argcomplete/hook/```
+```source colcon-argcomplete.bash```
 —----------------------------------------------------------------------------------------------------------
 Learning >>> if we wanna start something source every time, we can add that to the ~/.bashrc file  >> that means it will run every time after a terminal is opened…
 —----------------------------------------------------------------------------------------------------------
@@ -75,12 +84,19 @@ We have to include this command to our ~/.bashrc so that we can always get the l
 
 —--------------- summary of episode 17—-----------
 We created a python file inside the package folder. Inside that python file we created a node using Node class with the constructor for node name..and then run and install our python node
-—---------------------------------------------------------------------------------------------------------------------
-VDO 18 >>> nodes with oop
-For making our program more scalable we should use OOP in writing the code of the node
+
+---------------------------------------------------------------------------------------------------------------------
+
+### VDO 18 
+#### nodes with oop
+* For making our program more scalable we should use OOP in writing the code of the node
 Changed the nodes code for oop
-Compiile the node again from the workspace directory using ```colon build —packages-select my_python_pkg```
+Compiile the node again from the workspace directory using 
+
+```colon build —packages-select my_python_pkg```
+
 To see more check my_first_node.py code
-—----------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------
 Vdo 19 >> nodes with cpp >>> skipping this right now
 
