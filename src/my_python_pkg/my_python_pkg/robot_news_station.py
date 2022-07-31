@@ -9,7 +9,8 @@ class RobotNewsStationNode(Node):
         super().__init__("robot_news_station")
         
         self.robot_name_ = "C3PO"
-        self.publisher_ = self.create_publisher(String, "robot_news", 10)
+        self.publisher_ = self.create_publisher(String, "robot_news", 10) ## robot_news is the name of the topic
+        #10(que size) means after 10 msg the new msgs will be lost...application is holding 10 msgs for buffering
         self.timer_ = self.create_timer(0.5, self.publish_news)
         self.get_logger().info("Robot News has been started")
 

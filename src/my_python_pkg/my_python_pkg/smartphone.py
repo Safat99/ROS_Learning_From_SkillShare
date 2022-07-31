@@ -7,7 +7,7 @@ from example_interfaces.msg import String
 
 class SmartphoneNode(Node):
     def __init__(self):
-        super().__init__("node_name")
+        super().__init__("smartphone_node")
         self.subscriber_ = self.create_subscription(
             String, "robot_news", self.callback_robot_news, 10)
         self.get_logger().info("Smartphone has created")
