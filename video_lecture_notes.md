@@ -68,35 +68,47 @@ To create a ros2 node we need to create a package<br>
 **Package create**>> 
 	cd src >> 
 
-``` ros2 pkg create my_py_pkg –build-type ament_python  –dependencies rclpy```
+```
+ros2 pkg create my_py_pkg --build-type ament_python --dependencies rclpy
+```
 
-Dependency  r jonne –dependency rclpy >> ros python library lagbe
- Build type >> cpp  er jonne ekdhorener aar python er jonne ament_python
+
+* **`--dependency rclpy`** >> ros python library dependency
+
+* **`--build-type`** >> cpp  er jonne ekdhorener aar python er jonne ament_python
+
 ``` cd my_py_pkg```
 Package.xml file e gele shob jinish gula details dekha jaabe
 
-Now if we want to compile our package…open a new terminal, go to ros workspace and then type >>
- ``` colcon build```>> build all package
-``` colcon build –packages-select my_py_pkg``` >> compile 1 package
+---
 
-That means our python package is now ready to host any python node
+Now if we want to compile our package:
+1. Open a new terminal, 
+2. go to ros workspace and then type:
 
-VDO 15 >>> ros2 create cpp package
+	``` colcon build``` >> build all package<br>
+	``` colcon build –packages-select my_py_pkg``` >> compile 1 package
+
+**That means our python package is now ready to host any python node**
+
+---
+### VDO 15 >>> ros2 create cpp package
 ### VDO 16 >> > NODES
+<p>
 	Nodes communicate to each other on the same package…
 	Suppose a robot workspace have several packages like camera package, motion planning package, hardware control etc… inside camera package we have camera driver, image processing node etc … nodes are files(codes) inside those packages
+</p>
 
 
 Definition >> nodes
 
  	Subprograms in your application, responsible for one thing. Similar to OOP class
-
-Combined into a graph
-Communicate with each other through topics,services and parameters
+**Features:**
+- Combined into a graph<br>
+- Communicate with each other through topics,services and parameters
 
 **Benefits of nodes >>**
 * Reduce code complexity
-
 * Fault tolerance ( if one node crashes others will not crashed)
 * One node can be written in python and another c++ can easily communicate
 
@@ -106,19 +118,18 @@ In this video, hands on code on how to create and execute your first ros2 node h
 
 We can execute a node with python3 directly.. Or also we can install it for further functionalitiues.
 
-* To install a ros node we have to edit the setup.py file 
-But the professional way is different. We will use 
+To install a ros node:
+1. we have to edit the setup.py file. But the professional way is different. We will use 
 
-> ```ros2 run package_name executable_file``` 
-> ``` ros2 run my_python_pkg py_node``` 
+	```ros2 run package_name executable_file``` <br>
+	``` ros2 run my_python_pkg py_node``` 
 
-here in the setup.py file we named the executable file as py_node
+	here in the setup.py file we named the executable file as py_node
 
+2. We have to source the local_setup.bash inside the ros2_ws/install folder<br>
+3. We have to include this command to our ~/.bashrc so that we can always get the latest file after opening a terminal
 
-We have to source the local_setup.bash inside the ros2_ws/install folder
-We have to include this command to our ~/.bashrc so that we can always get the latest file after opening a terminal
-
-—--------------- summary of episode 17—-----------
+----------------- **summary of episode 17** -----------<br>
 We created a python file inside the package folder. Inside that python file we created a node using Node class with the constructor for node name..and then run and install our python node
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -127,12 +138,13 @@ We created a python file inside the package folder. Inside that python file we c
 #### nodes with oop
 * For making our program more scalable we should use OOP in writing the code of the node
 * Changed the nodes code for oop
-* Compiile the node again from the workspace directory using 
+* Compiile the node again from the workspace directory using:
 
-```colon build —packages-select my_python_pkg```
+	```colon build —packages-select my_python_pkg```
 
 To see more check my_first_node.py code
 
 ----------------------------------------------------------------------------------------------------------------------------
-Vdo 19 >> nodes with cpp >>> skipping this right now
+
+### Vdo 19 >> nodes with cpp >>> skipping this right now
 
