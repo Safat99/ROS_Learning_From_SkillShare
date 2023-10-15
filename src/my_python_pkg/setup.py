@@ -13,6 +13,8 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name, 'launch'), glob('launch/*')),
+        ## all the additional files in the launch/* folder packages are copied into this share folder,package_name,launch file
+        ## if we open the home folder(ws) then install/my_python_pkg/share, we can find all the files there
     ],
     install_requires=['setuptools'],
     zip_safe=True,
