@@ -2,3 +2,4 @@ build/
 install/
 log/
 src/my_python_pkg/my_python_pkg/__pycache__/
+src/.vscode/

@@ -1,53 +1,65 @@
 # Following SkillShare ROS2 course of total 90 videos 
 
 ### Introduction 
-	ROS is something between middleware and a framework but especially for robot applications
+ROS is something between middleware and a framework but especially for robot applications
 ### Goals
-	> can be used on any robots
-	> you don’t need to reinvent the wheel
+* can be used on any robots
+* you don’t need to reinvent the wheel
 ### Advantage 
-	* code separation
-	* plug and play libraries >> navigation 
-	* libraries >> we can use both languages on the same project
+* code separation
+* plug and play libraries >> navigation 
+* libraries >> we can use both languages on the same project
 
-Installation
-	Documentation ( vdo 4-8)
-	Demo node >> vdo 9 ( ros node talker receiver) 
+>>Installation Documentation ( vdo 4-8)
+
+>> Demo node >> vdo 9 ( ros node talker receiver) 
 
 ```source /opt/ros/foxy/setup.bash```
 
 
 ### VDO 10 >>>
-	ros2 run demo_nodes_cpp talker
-	ros2 run demo_nodes_cpp listener
-Learning 
+```
+ros2 run demo_nodes_cpp talker
+ros2 run demo_nodes_cpp listener
+```
+>> Learning 
 	>> LTS >> long term support, terminator for multi terminal
 
 ### VDO 11 >> 
-	to setup new node .., create package , rewrite the node inside the package, save compile run >>>
+- to setup new node ..,
+- create package ,
+- rewrite the node inside the package, 
+- save compile run >>>
 
 ### VDO 12 >>> 
-colcon build, colcon-extension package install<br>
+* colcon build, 
+* colcon-extension package install<br>
+
 **colcon:** to create my own ros2 program we need a build tool specialized for ros2 which is named colcon..
 
-	sudo apt install python3-colcon-common-extensions
+```
+sudo apt install python3-colcon-common-extensions
+```
 
 We also need to enable also autocompletion features of colcon which has to run everytime
 
-	cd usr/share/colcon_argcomplete/hook/
-
-	source colcon-argcomplete.bash
-
-----------------------------------------------------------------------------------------------------------
-Learning >>> if we wanna start something source every time, we can add that to the ~/.bashrc file  >> that means it will run every time after a terminal is opened…
-—----------------------------------------------------------------------------------------------------------
-### Vdo 13 >>> 
-	mkdir ros_learning
-	cd ros_learning 
-	mkdir ros2_ws(workspace)
-	cd workspace
-	mkdir src
- 	colcon build (for building the workspace)
+```
+cd usr/share/colcon_argcomplete/hook/
+source colcon-argcomplete.bash
+```
+---
+>>>Learning >>> if we wanna start something source every time, we can add that to the ~/.bashrc file 
+that means it will run every time after a terminal is opened…
+---
+### Vdo 13 >>>
+``` 
+mkdir ros_learning
+cd ros_learning 
+mkdir ros2_ws(workspace)
+cd workspace
+mkdir src
+colcon build (for building the workspace)
+```
 * Add the install/setup.bash to the ./bashrc folder
 * Source the install file
 
